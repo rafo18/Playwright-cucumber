@@ -1,0 +1,14 @@
+{
+    "default":{
+        "paths":["e2e/tests/features/**/*.feature"],
+        "require":[
+            "e2e/tests/steps/**/*.ts",
+            "e2e/corelib/*.ts"
+        ],
+        "formatOptions": {
+            "snippetInterface": "aysnc-await"
+        },
+        "requireModule":["ts-node/register"],
+        "dryRun":false
+    }
+}

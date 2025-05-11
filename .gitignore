@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Testing
+coverage/
+*.lcov
+
+# Environment variables
+.env
+.env.*.local
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sw?
+
+# Mac system files
+.DS_Store
+
+# Playwright specific
+playwright-report/
+test-results/

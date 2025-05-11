@@ -1,0 +1,14 @@
+{
+    "UserInput":{
+        "locator": "#user-name",
+        "description": "user name input"
+    },
+    "PasswordInput":{
+        "locator":"#password",
+        "description":"password input"
+    },
+    "submitButton":{
+        "locator":"#login-button",
+        "description":"Login button"
+    }
+}

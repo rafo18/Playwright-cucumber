@@ -1,0 +1,6 @@
+{
+    "shoppingCart":{
+        "locator": "#shopping_cart_container",
+        "description":"shopping cart icon"
+    }
+}
