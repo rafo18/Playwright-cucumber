@@ -1,12 +1,11 @@
 import { Page } from "playwright";
 import * as LoginPageLocators from "../locators/loginLocators.json";
+import BasePage from "./basePage";
 
-export default class LoginPage {
-    
-    page:Page;
+export default class LoginPage extends BasePage{
     
     constructor(page:Page) {
-        this.page = page;
+        super(page);
     }
 
     async goToPage(){

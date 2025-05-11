@@ -1,12 +1,12 @@
 import { Page } from "playwright";
 import * as HomePageLocators from "../locators/homePage.json";
+import  BasePage  from "../pages/basePage";
 
-export default class HomePage {
 
-    page:Page;
+export default class HomePage extends BasePage{
 
     constructor(page:Page) {
-        this.page = page;
+        super(page);
     }
 
     async waitForIcon(){

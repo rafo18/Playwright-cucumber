@@ -39,3 +39,4 @@ coverage/
 # Playwright specific
 playwright-report/
 test-results/
+reports
