@@ -9,13 +9,12 @@ export default class LoginPage extends BasePage{
     }
 
     async goToPage(){
-        await this.page.goto('https://www.saucedemo.com/v1/');
-        
+        return
     }
 
     async loginIntoApp() {
-        await this.enter(LoginPageLocators.UserInput,'standard_user');
-        await this.enter(LoginPageLocators.PasswordInput,'secret_sauce');
+        await this.enter(LoginPageLocators.UserInput,process.env.user_name!);
+        await this.enter(LoginPageLocators.PasswordInput,process.env.password!);
         await this.click(LoginPageLocators.submitButton)
         
         
