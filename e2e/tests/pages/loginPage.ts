@@ -10,15 +10,14 @@ export default class LoginPage extends BasePage{
 
     async goToPage(){
         await this.page.goto('https://www.saucedemo.com/v1/');
-        console.log('------page-------');
         
     }
 
     async loginIntoApp() {
-        await this.page.locator(LoginPageLocators.UserInput.locator).fill('standard_user');
-        await this.page.locator(LoginPageLocators.PasswordInput.locator).fill('secret_sauce');
-        await this.page.locator(LoginPageLocators.submitButton.locator).click();
-        console.log('-----page2-----');
+        await this.enter(LoginPageLocators.UserInput,'standard_user');
+        await this.enter(LoginPageLocators.PasswordInput,'secret_sauce');
+        await this.click(LoginPageLocators.submitButton)
+        
         
     }
 

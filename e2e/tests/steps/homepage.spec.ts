@@ -9,22 +9,24 @@ let homepage:HomePage;
 let loginPage:LoginPage;
 
 Given('User is a homepage',async function () {
+    console.log('----Given-----');
+    
     loginPage = new LoginPage(getPage());
     await loginPage.goToPage();
 
 });
 
 When('User enter login details', async function () {
-    await loginPage.loginIntoApp();
+    console.log('-------When---------');
     
-    
+    await loginPage.loginIntoApp(); 
 });
 
 Then('Then close the browser',async function () {
+    console.log('--------Then----------');
     homepage = new HomePage(getPage());
-
     const isVisible = await homepage.waitForIcon();
-    expect(isVisible).toEqual(true);
+    expect(isVisible).toBeTruthy();
     
 });
 

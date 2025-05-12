@@ -10,10 +10,11 @@ export default class HomePage extends BasePage{
     }
 
     async waitForIcon(){
-       const Icon = await this.page.locator(HomePageLocators.shoppingCart.locator).isVisible();
-       await this.page.locator(HomePageLocators.shoppingCart.locator).click();
+       const Icon = await this.getLocator(HomePageLocators.shoppingCart)
+       Icon.isVisible();
+       await this.click(HomePageLocators.shoppingCart); 
        await this.page.waitForTimeout(4000);
-
-       return Icon;
+       
+       return Icon
     }
 }
