@@ -12,9 +12,12 @@ BeforeAll(async function () {
 
     console.log('--------before all-------------');
     
-    dotenv.config();
+    dotenv.config({
+        path: `e2e/config/.env.${process.env.npm_config_env}`
+    });
 
-    let browserType = process.env.browser
+    let browserType = process.env.browser;
+    
     console.log(`Open browser ${browserType}`);
     
 
@@ -30,7 +33,7 @@ BeforeAll(async function () {
             break;
         case 'firefox':
             browser = await firefox.launch({
-                headless:false,
+                headless:true,
                 args:[
                     '--start-maximized'
                 ]

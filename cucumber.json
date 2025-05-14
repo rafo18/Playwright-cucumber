@@ -9,6 +9,12 @@
             "snippetInterface": "aysnc-await"
         },
         "requireModule":["ts-node/register"],
-        "dryRun":false
+        "dryRun":false,
+        "format":[
+            ["json","reports/cucumber_report.json"],
+            ["junit","reports/report-xml.xml"],
+            ["html","reports/report-html.html"]
+
+        ]
     }
 }

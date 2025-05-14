@@ -25,7 +25,7 @@ coverage/
 *.lcov
 
 # Environment variables
-
+config/
 .env.*.local
 
 # IDEs and editors
